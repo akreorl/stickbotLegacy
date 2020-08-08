@@ -116,4 +116,4 @@ client.on("message", async message => {
     }
 });
 
-client.login(BOT_TOKEN);
+client.login(TOKEN);
