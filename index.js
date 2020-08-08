@@ -22,16 +22,16 @@ client.categories = fs.readdirSync("./commands/");
 
 client.on("ready", () => {
     console.log(`${client.user.tag} 에 로그인됨`);
-    client.user.setActivity(config.defaultStatus, {
+    client.user.setActivity("-도움", {
       type: 'WATCHING'
     });
 });
 
 client.on("message", async message => {
-    let prefix = config.prefix;
+    let prefix = "-";
 
     if (message.content === '-돋보기') {
-        if (message.author.id !== config.ownerID) {
+        if (message.author.id !== "457403818913693696") {
             return message.reply("현재 한시적으로 돋보기 기능을 이용할수 없습니다").then(m => m.delete(5000));
         }
         if (emotechat === true) {
@@ -117,4 +117,4 @@ client.on("message", async message => {
     }
 });
 
-client.login(config.token);
+client.login(BOT_TOKEN);
