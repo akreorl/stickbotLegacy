@@ -117,4 +117,4 @@ client.on("message", async message => {
     }
 });
 
-client.login(env.process.TOKEN);
+client.login(process.env.TOKEN);
