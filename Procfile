@@ -1,1 +1,1 @@
-web: NODE_DEBUG=* node index.js
+worker : node index.js
