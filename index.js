@@ -1,6 +1,5 @@
 const API = require("discord.js")
-const config = require("./config.json");
-const fs = require("fs");
+const { config } = require("dotenv");
 let emotechat = false
 
 const client = new API.Client({
