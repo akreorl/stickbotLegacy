@@ -103,6 +103,8 @@ client.on("message", async message => {
         .setTitle('일반 명령어')
         .setAuthor('막대기봇 초대(클릭)', 'https://i.imgur.com/iNxjnfg.jpg', 'https://discord.com/api/oauth2/authorize?client_id=676070482189090826&permissions=1074097350&scope=bot')
         .setDescription(' ')
+	.addField('막대기봇 초대 명령어', '사용방법: -초대 \n 막대기봇에 딱 맞는 초대링크를 드립니다', false)
+        .addField('막대기봇 서포트 서버 명령어', '사용방법: -서포트 \n 막대기봇의 건의와 문의를 받는 서포트 서버 링크를 드립니다', false)
         .addField('가위바위보 명령어', '사용방법: -가위바위보 후 이모지 3개중 원하는 것을 고르세요 \n 봇과 가위바위보 를 합니다', false)
         .addField('핑 명령어', '사용방법: -핑 \n 클라이언트 핑을 알려줍니다', false)
         .setTimestamp()
