@@ -22,7 +22,7 @@ client.categories = fs.readdirSync("./commands/");
 
 client.on("ready", () => {
     console.log(`${client.user.tag} 에 로그인됨`);
-    client.user.setActivity("-도움", {
+    client.user.setActivity("-도움ㅣ막대기봇 멘션", {
       type: 'WATCHING'
     });
 });
