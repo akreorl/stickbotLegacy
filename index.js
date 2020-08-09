@@ -50,7 +50,7 @@ client.on("message", async message => {
             .setImage(`https://cdn.discordapp.com/emojis/${data[2].replace(/>/gi, '')}.png?v=1`)
             .setColor('#0099ff')
             .setTimestamp()
-            .setAuthor('막대기봇', 'https://i.imgur.com/iNxjnfg.jpg', 'https://discord.com/oauth2/authorize?client_id=676070482189090826&permissions=8&scope=bot');
+            .setAuthor('막대기봇', 'https://i.imgur.com/iNxjnfg.jpg', 'https://discord.com/api/oauth2/authorize?client_id=676070482189090826&permissions=1074097350&scope=bot');
             message.channel.send(embed)
         }
     }
@@ -70,7 +70,7 @@ client.on("message", async message => {
         const embed = new API.MessageEmbed()
         .setColor('#0099ff')
         .setTitle('명령어')
-	    .setAuthor('막대기봇 초대(클릭)', 'https://i.imgur.com/iNxjnfg.jpg', 'https://discord.com/oauth2/authorize?client_id=676070482189090826&permissions=8&scope=bot')
+	    .setAuthor('막대기봇 초대(클릭)', 'https://i.imgur.com/iNxjnfg.jpg', 'https://discord.com/api/oauth2/authorize?client_id=676070482189090826&permissions=1074097350&scope=bot')
         .setDescription('막대기봇 사용을 위한 명령어 정리입니다.\n 명령어는 앞으로도 많이 추가될 예정입니다.')
 	    .addFields(
 		{ name: '접두사', value: '"-"(막대기)', inline: false},
@@ -86,7 +86,7 @@ client.on("message", async message => {
         const embed = new API.MessageEmbed()
         .setColor('#0099ff')
         .setTitle('관리 명령어')
-        .setAuthor('막대기봇 초대(클릭)', 'https://i.imgur.com/iNxjnfg.jpg', 'https://discord.com/oauth2/authorize?client_id=676070482189090826&permissions=8&scope=bot')
+        .setAuthor('막대기봇 초대(클릭)', 'https://i.imgur.com/iNxjnfg.jpg', 'https://discord.com/api/oauth2/authorize?client_id=676070482189090826&permissions=1074097350&scope=bot')
         .setDescription(' ')
         .addField('유저 밴(차단) 명령어', '사용방법: -밴 (밴하고 싶은 유저) (밴 하는 이유) \n 해당 유저를 서버에서 밴(차단) 합니다', false)
         .addField('유저 킥(강퇴) 명령어', '사용방법: -킥 (킥하고 싶은 유저) (킥 하는 이유) \n 해당 유저를 서버애서 킥(강퇴) 합니다', false)
@@ -101,7 +101,7 @@ client.on("message", async message => {
         const embed = new API.MessageEmbed()
         .setColor('#0099ff')
         .setTitle('일반 명령어')
-        .setAuthor('막대기봇 초대(클릭)', 'https://i.imgur.com/iNxjnfg.jpg', 'https://discord.com/oauth2/authorize?client_id=676070482189090826&permissions=8&scope=bot')
+        .setAuthor('막대기봇 초대(클릭)', 'https://i.imgur.com/iNxjnfg.jpg', 'https://discord.com/api/oauth2/authorize?client_id=676070482189090826&permissions=1074097350&scope=bot')
         .setDescription(' ')
         .addField('가위바위보 명령어', '사용방법: -가위바위보 후 이모지 3개중 원하는 것을 고르세요 \n 봇과 가위바위보 를 합니다', false)
         .addField('핑 명령어', '사용방법: -핑 \n 클라이언트 핑을 알려줍니다', false)
