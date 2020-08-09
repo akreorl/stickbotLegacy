@@ -5,3 +5,4 @@ stickvbot verson 2
 코드 오류 또는 질문(막대기봇 서포트 서버):
 https://disocrd.gg/u2w4Vys
 제작자: 막대기#8299
+2020-08-09/막대기 레포지토리 Private로 
