@@ -54,6 +54,17 @@ client.on("message", async message => {
             message.channel.send(embed)
         }
     }
+	
+    if (message.mentions.users.some(x => x.id == client.user.id ) &&  !message.author.bot) {
+        const embed = new API.MessageEmbed()
+        .setColor('#0099ff')
+        .setTitle('저를 부르셧나요?')
+        .setThumbnail('https://i.imgur.com/iNxjnfg.jpg')
+        .setDescription('접두사는 **-** 입니다 \n **-도움** 을 해보세요! \n 봇 제작: <@457403818913693696>')
+        .setFooter('막대기봇을 이용해 주셔서 감사합니다')
+        .setTimestamp()
+        message.channel.send(embed)
+    }
 
     if (message.content === '-도움') {
         const embed = new API.MessageEmbed()
