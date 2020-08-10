@@ -1,5 +1,5 @@
 # stickbot.V2
-stickvbot verson 2
+stickvbot Version2
 오픈소스 막대기봇V2 입니다
 코드를 이용하실땐 꼭 저작자를 남겨주세요
 config.json 의 BOT_TOKEN이 토큰 자리입니다
