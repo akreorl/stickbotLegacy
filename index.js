@@ -103,7 +103,7 @@ client.on("message", async message => {
         .setTitle('일반 명령어')
         .setAuthor('막대기봇 초대(클릭)', 'https://i.imgur.com/iNxjnfg.jpg', 'https://discord.com/api/oauth2/authorize?client_id=676070482189090826&permissions=1074097350&scope=bot')
         .setDescription(' ')
-	.addField('유저, 봇 정보 명령어', '사용방법: **-정보, -정보 (멘션)** \n 멘션을 하지 않았을시 자신의 정보, 멘션한 유저의 정보를 출', false)
+	.addField('유저, 봇 정보 명령어', '사용방법: **-정보, -정보 (멘션)** \n 멘션을 하지 않았을시 자신의 정보, 멘션한 유저의 정보를 출력합니다', false)
 	.addField('막대기봇 정보 명령어', '사용방법: **-봇정보** \n 막대기봇의 정보를 출력합니다', false)
 	.addField('서버 정보 명령어', '사용방법: **-서버정보** \n 서버 정보를 출력합니다', false)
 	.addField('막대기봇 초대 명령어', '사용방법: **-초대** \n 막대기봇에 딱 맞는 초대링크를 드립니다', false)
