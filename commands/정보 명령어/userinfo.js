@@ -1,7 +1,7 @@
 const { MessageEmbed, DiscordAPIError, Discord, bot } = require("discord.js")
 
 module.exports = {
-    name: "유저정보",
+    name: "정보",
     category: "일반 명령어",
     description: "멘션한 유저의 정보를 출력합니다",
     run: async (bot, message, args) => {
