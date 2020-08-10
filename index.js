@@ -31,8 +31,8 @@ client.on("message", async message => {
     let prefix = "-";
 
     if (message.content === '-돋보기') {
-        if (message.author.id !== "457403818913693696") {
-            return message.reply("현재 한시적으로 돋보기 기능을 이용할수 없습니다").then(m => m.delete(5000));
+        if (!message.member.hasPermission("ADMINISTRATOR")) {
+            return message.reply("서버 관리자만 돋보기 활성화/비활성화가 가능합니다").then(m => m.delete(5000));
         }
         if (emotechat === true) {
             emotechat = false
@@ -88,10 +88,10 @@ client.on("message", async message => {
         .setTitle('관리 명령어')
         .setAuthor('막대기봇 초대(클릭)', 'https://i.imgur.com/iNxjnfg.jpg', 'https://discord.com/api/oauth2/authorize?client_id=676070482189090826&permissions=1074097350&scope=bot')
         .setDescription(' ')
-        .addField('유저 밴(차단) 명령어', '사용방법: -밴 (밴하고 싶은 유저) (밴 하는 이유) \n 해당 유저를 서버에서 밴(차단) 합니다', false)
-        .addField('유저 킥(강퇴) 명령어', '사용방법: -킥 (킥하고 싶은 유저) (킥 하는 이유) \n 해당 유저를 서버애서 킥(강퇴) 합니다', false)
-        .addField('돋보기(이모지 확대 기능)', '사용방법: -돋보기(처음은 꺼진 상태, on/off 형식) \n 활성화 되있을시 서버 이모지를 임베드로 확대시켜줍니다 \n 현재 일시적으로 돋보기 사용이 불가능합니다', false)
-        .addField('메시지 클리어(대량 삭제) 명령어', '사용방법: -클리어 (지우고 싶은 갯수) \n 해당 갯수많큼 메시지를 삭제합니다(한번에 최대 100개까지 삭제 가능)', false)
+	.addField('돋보기(이모지 확대 기능)', '사용방법: **-돋보기(처음은 꺼진 상태, on/off 형식)** \n 활성화 되있을시 서버 이모지를 임베드로 확대시켜줍니다 \n 봇이 재시작될시 off로 설정됩니다. 되지 않는다면 확인 바랍니다', false)
+        .addField('유저 밴(차단) 명령어', '사용방법: **-밴 (밴하고 싶은 유저) (밴 하는 이유)** \n 해당 유저를 서버에서 밴(차단) 합니다', false)
+        .addField('유저 킥(강퇴) 명령어', '사용방법: **-킥 (킥하고 싶은 유저) (킥 하는 이유)** \n 해당 유저를 서버애서 킥(강퇴) 합니다', false)
+        .addField('메시지 클리어(대량 삭제) 명령어', '사용방법: **-클리어 (지우고 싶은 갯수)** \n 해당 갯수많큼 메시지를 삭제합니다(한번에 최대 100개까지 삭제 가능)', false)
         .setTimestamp()
         .setFooter('막대기봇을 이용해 주셔서 감사합니다','https://i.imgur.com/iNxjnfg.jpg');
         message.channel.send(embed)
@@ -103,12 +103,12 @@ client.on("message", async message => {
         .setTitle('일반 명령어')
         .setAuthor('막대기봇 초대(클릭)', 'https://i.imgur.com/iNxjnfg.jpg', 'https://discord.com/api/oauth2/authorize?client_id=676070482189090826&permissions=1074097350&scope=bot')
         .setDescription(' ')
-	.addField('막대기봇 정보 명령어', '사용방법: -봇정보 \n 막대기봇의 정보를 출력합니다', false)
-	.addField('서버 정보 명령어', '사용방법: -서버정보 \n 서버 정보를 출력합니다', false)
-	.addField('막대기봇 초대 명령어', '사용방법: -초대 \n 막대기봇에 딱 맞는 초대링크를 드립니다', false)
-        .addField('막대기봇 서포트 서버 명령어', '사용방법: -서포트 \n 막대기봇의 건의와 문의를 받는 서포트 서버 링크를 드립니다', false)
-        .addField('가위바위보 명령어', '사용방법: -가위바위보 후 이모지 3개중 원하는 것을 고르세요 \n 봇과 가위바위보 를 합니다', false)
-        .addField('핑 명령어', '사용방법: -핑 \n 클라이언트 핑을 알려줍니다', false)
+	.addField('막대기봇 정보 명령어', '사용방법: **-봇정보** \n 막대기봇의 정보를 출력합니다', false)
+	.addField('서버 정보 명령어', '사용방법: **-서버정보** \n 서버 정보를 출력합니다', false)
+	.addField('막대기봇 초대 명령어', '사용방법: **-초대** \n 막대기봇에 딱 맞는 초대링크를 드립니다', false)
+        .addField('막대기봇 서포트 서버 명령어', '사용방법: **-서포트** \n 막대기봇의 건의와 문의를 받는 서포트 서버 링크를 드립니다', false)
+        .addField('가위바위보 명령어', '사용방법: **-가위바위보 후 이모지 3개중 원하는 것을 고르세요** \n 봇과 가위바위보 를 합니다 ~~(주의, 많이 띠껍습니다)~~', false)
+        .addField('핑 명령어', '사용방법: **-핑** \n 클라이언트 핑을 알려줍니다', false)
         .setTimestamp()
         .setFooter('막대기봇을 이용해 주셔서 감사합니다','https://i.imgur.com/iNxjnfg.jpg');
         message.channel.send(embed)
