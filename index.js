@@ -1,5 +1,6 @@
 const API = require("discord.js")
 const { config } = require("dotenv");
+const config = require("./config.json");
 const fs = require("fs");
 let emotechat = false
 
@@ -22,13 +23,13 @@ client.categories = fs.readdirSync("./commands/");
 
 client.on("ready", () => {
     console.log(`${client.user.tag} 에 로그인됨`);
-    client.user.setActivity("도움ㅣ막대기봇 멘션", {
+    client.user.setActivity(config.defaultStatus, {
       type: 'WATCHING'
     });
 });
 
 client.on("message", async message => {
-    let prefix = "-";
+    let prefix = config.prefix;
 
     if (message.content === '-돋보기') {
         if (!message.member.hasPermission("ADMINISTRATOR")) {
@@ -132,4 +133,4 @@ client.on("message", async message => {
     }
 });
 
-client.login(process.env.TOKEN);
+client.login(config.token);
