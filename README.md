@@ -8,3 +8,4 @@ https://disocrd.gg/u2w4Vys
 2020-08-09/막대기 레포지토리 Private로 전환됨
 깃허브-디스코드 웹훅 
 깃허브-디스코드 웹훅 테스트 성공
+© 2020 Stickbot all rights reserved.
