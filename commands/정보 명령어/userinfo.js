@@ -35,6 +35,7 @@ module.exports = {
                     .addField("지금 하는 게임", `${member.user.presence.game ? `🎮 ${member.user.presence.game.name}` : "<a:no:742569138764906628> 아무 게임도 안 하는중"}`,inline, true)
                     .addField("역할들", `${member.roles.cache.filter(r => r.id !== message.guild.id).map(roles => `\`${roles.name}\``).join(" **|** ") || "<a:no:742569138764906628> 역할 없음"}`, true)
                     .addField("생일", member.user.createdAt)
+                    .addField("이 서버 가입일", message.member.joinedAt)
                     .setFooter(`${member.user.username} 의 정보`)
                     .setTimestamp()
         
