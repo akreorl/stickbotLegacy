@@ -21,6 +21,7 @@ module.exports = {
         .addField("유저 수", `<:discord:742021671497629737> ${usersize}`, inline)
         .addField("봇 언어", "<:Discordjs:742015427579740251> Discord.js", inline)
         .addField("생일", bot.user.createdAt)
+        .addField("이 서버 가입일", message.guild.joinedAt)
         .setFooter(`${bot.user.username} 정보`)
         .setTimestamp()
         message.channel.send(ME);
