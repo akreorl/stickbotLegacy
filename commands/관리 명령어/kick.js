@@ -62,9 +62,10 @@ module.exports = {
             .setDescription(` ${toKick} 을 킥하시겟습니까?`)
 
         await message.channel.send(promptEmbed).then(async msg => {
-            const emoji = await promptMessage(msg, message.author, 30, ["<a:yes:742568893351985303>", "<a:no:742569138764906628>"]);
+            const emoji = await promptMessage(msg, message.author, 30, ["✅", "❌"]);
 
-            if (emoji === "<a:yes:742568893351985303>>") {
+            if (emoji === "") {
+                message.reply(`✅ 킥 됨`)
 
                 toKick.kick(args.slice(1).join(" "))
                     .catch(err => {
@@ -72,7 +73,7 @@ module.exports = {
                     });
 
                 logChannel.send(embed);
-            } else if (emoji === "<a:no:742569138764906628>") {
+            } else if (emoji === "❌") {
                 msg.delete();
 
                 message.reply(`<a:no:742569138764906628> 킥 취소됨`)
