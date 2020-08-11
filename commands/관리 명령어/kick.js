@@ -64,7 +64,7 @@ module.exports = {
         await message.channel.send(promptEmbed).then(async msg => {
             const emoji = await promptMessage(msg, message.author, 30, ["<a:no:742569138764906628>", "<a:no:742569138764906628>"]);
 
-            if (emoji === "<a:no:742569138764906628>") {
+            if (emoji === "<a:yes:742568893351985303>>") {
 
                 toKick.kick(args.slice(1).join(" "))
                     .catch(err => {
