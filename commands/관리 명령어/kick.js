@@ -11,22 +11,22 @@ module.exports = {
 
 
         if (!args[0]) {
-            return message.reply("킥할 사람을 멘션해 주세요")
+            return message.reply("<a:no:742569138764906628>킥할 사람을 멘션해 주세요")
                 .then(m => m.delete(5000));
         }
 
         if (!args[1]) {
-            return message.reply("킥 하는 이유를 적어주세요")
+            return message.reply("<a:no:742569138764906628>킥 하는 이유를 적어주세요")
                 .then(m => m.delete(5000));
         }
 
         if (!message.member.hasPermission("KICK_MEMBERS")) {
-            return message.reply("❌ 당신은 유저 강퇴 권한이 없습니다")
+            return message.reply("<a:no:742569138764906628> 당신은 유저 강퇴 권한이 없습니다")
                 .then(m => m.delete(5000));
         }
 
         if (!message.guild.me.hasPermission("KICK_MEMBERS")) {
-            return message.reply("❌ 막대기봇이 강퇴 권한을 가지고 있지 않습니다")
+            return message.reply("<a:no:742569138764906628> 막대기봇이 강퇴 권한을 가지고 있지 않습니다")
                 .then(m => m.delete(5000));
         }
 
@@ -38,12 +38,12 @@ module.exports = {
         }
 
         if (toKick.id === message.author.id) {
-            return message.reply("자기 자신을 킥 할수 없습니다")
+            return message.reply("<a:no:742569138764906628>자기 자신을 킥 할수 없습니다")
                 .then(m => m.delete(5000));
         }
 
         if (!toKick.kickable) {
-            return message.reply("역할 순위가 높아 강퇴할수 없습니다")
+            return message.reply("<a:no:742569138764906628>역할 순위가 높아 강퇴할수 없습니다")
                 .then(m => m.delete(5000));
         }
                 
@@ -62,10 +62,9 @@ module.exports = {
             .setDescription(` ${toKick} 을 킥하시겟습니까?`)
 
         await message.channel.send(promptEmbed).then(async msg => {
-            const emoji = await promptMessage(msg, message.author, 30, ["✅", "❌"]);
+            const emoji = await promptMessage(msg, message.author, 30, ["<a:no:742569138764906628>", "<a:no:742569138764906628>"]);
 
-            if (emoji === "✅") {
-                msg.delete();
+            if (emoji === "<a:no:742569138764906628>") {
 
                 toKick.kick(args.slice(1).join(" "))
                     .catch(err => {
@@ -73,11 +72,10 @@ module.exports = {
                     });
 
                 logChannel.send(embed);
-            } else if (emoji === "❌") {
+            } else if (emoji === "<a:no:742569138764906628>") {
                 msg.delete();
 
                 message.reply(`Kick canceled.`)
-                    .then(m => m.delete(10000));
             }
         });
     }
