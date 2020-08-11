@@ -26,7 +26,7 @@ module.exports = {
                 let embed = new MessageEmbed()
                     .setAuthor(member.user.username)
                     .setThumbnail((target.displayAvatarURL))
-                    .setColor("#00ff00")
+                    .setColor("#0099ff")
                     .addField("유저태그", `${member.user.tag}`, inline)
                     .addField("유저 ID", member.user.id, inline)
                     .addField("별명", `${member.nickname !== null ? `<a:yes:742568893351985303> 별명: ${member.nickname}` : "<a:no:742569138764906628> 별명 없음"}`, true)
