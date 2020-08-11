@@ -64,8 +64,8 @@ module.exports = {
         await message.channel.send(promptEmbed).then(async msg => {
             const emoji = await promptMessage(msg, message.author, 30, ["✅", "❌"]);
 
-            if (emoji === "") {
-                message.reply(`✅ 킥 완료됨`)
+            if (emoji === "✅") {
+                message.reply(`<a:yes:742568893351985303> 킥 완료됨`)
 
                 toKick.kick(args.slice(1).join(" "))
                     .catch(err => {
