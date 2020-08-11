@@ -73,8 +73,7 @@ module.exports = {
                     });
 
                 logChannel.send(embed);
-            } else if (emoji === "<a:no:742569138764906628>") {
-                msg.delete();
+            } else if (emoji === "<a:yes:742568893351985303>") {
 
                 message.reply(`<a:no:742569138764906628>밴 취소됨.`)
                     .then(m => m.delete(10000));
