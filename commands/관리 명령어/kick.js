@@ -65,7 +65,7 @@ module.exports = {
             const emoji = await promptMessage(msg, message.author, 30, ["✅", "❌"]);
 
             if (emoji === "") {
-                message.reply(`✅ 킥 됨`)
+                message.reply(`✅ 킥 완료됨`)
 
                 toKick.kick(args.slice(1).join(" "))
                     .catch(err => {
@@ -74,7 +74,6 @@ module.exports = {
 
                 logChannel.send(embed);
             } else if (emoji === "❌") {
-                msg.delete();
 
                 message.reply(`<a:no:742569138764906628> 킥 취소됨`)
             }
