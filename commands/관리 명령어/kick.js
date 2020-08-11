@@ -33,7 +33,7 @@ module.exports = {
         const toKick = message.mentions.members.first() || message.guild.members.get(args[0]);
 
         if (!toKick) {
-            return message.reply("해당 멤버를 찾을수 없습니다, 다시 시도해 주세요")
+            return message.reply("<a:no:742569138764906628>해당 멤버를 찾을수 없습니다, 다시 시도해 주세요")
                 .then(m => m.delete(5000));
         }
 
@@ -62,7 +62,7 @@ module.exports = {
             .setDescription(` ${toKick} 을 킥하시겟습니까?`)
 
         await message.channel.send(promptEmbed).then(async msg => {
-            const emoji = await promptMessage(msg, message.author, 30, ["<a:no:742569138764906628>", "<a:no:742569138764906628>"]);
+            const emoji = await promptMessage(msg, message.author, 30, ["<a:yes:742568893351985303>", "<a:no:742569138764906628>"]);
 
             if (emoji === "<a:yes:742568893351985303>>") {
 
