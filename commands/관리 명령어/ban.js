@@ -11,39 +11,39 @@ module.exports = {
 
 
         if (!args[0]) {
-            return message.reply("밴할 사람을 멘션해 주세요")
+            return message.reply("<a:no:742569138764906628>밴할 사람을 멘션해 주세요")
                 .then(m => m.delete(5000));
         }
 
         if (!args[1]) {
-            return message.reply("밴 하는 이유를 적어주세요")
+            return message.reply("<a:no:742569138764906628>밴 하는 이유를 적어주세요")
                 .then(m => m.delete(5000));
         }
 
         if (!message.member.hasPermission("BAN_MEMBERS")) {
-            return message.reply("❌ 당신은 유저 밴 권한이 없습니다")
+            return message.reply("<a:no:742569138764906628> 당신은 유저 밴 권한이 없습니다")
                 .then(m => m.delete(5000));
         
         }
         if (!message.guild.me.hasPermission("BAN_MEMBERS")) {
-            return message.reply("❌ 막대기봇이 밴 권한을 가지고 있지 않습니다")
+            return message.reply("<a:no:742569138764906628> 막대기봇이 밴 권한을 가지고 있지 않습니다")
                 .then(m => m.delete(5000));
         }
 
         const toBan = message.mentions.members.first() || message.guild.members.get(args[0]);
 
         if (!toBan) {
-            return message.reply("해당 멤버를 찾을수 없습니다, 다시 시도해 주세요")
+            return message.reply("<a:no:742569138764906628>해당 멤버를 찾을수 없습니다, 다시 시도해 주세요")
                 .then(m => m.delete(5000));
         }
 
         if (toBan.id === message.author.id) {
-            return message.reply("자기 자신을 밴 할수 없습니다")
+            return message.reply("<a:no:742569138764906628>자기 자신을 밴 할수 없습니다")
                 .then(m => m.delete(5000));
         }
 
         if (!toBan.bannable) {
-            return message.reply("역할 순위가 높아 밴 할수 없습니다")
+            return message.reply("<a:no:742569138764906628>역할 순위가 높아 밴 할수 없습니다")
                 .then(m => m.delete(5000));
         }
         
@@ -62,9 +62,9 @@ module.exports = {
             .setDescription(` ${toBan} 을 밴하시겟습니까?`)
 
         await message.channel.send(promptEmbed).then(async msg => {
-            const emoji = await promptMessage(msg, message.author, 30, ["✅", "❌"]);
+            const emoji = await promptMessage(msg, message.author, 30, ["<a:yes:742568893351985303>", "<a:no:742569138764906628>"]);
 
-            if (emoji === "✅") {
+            if (emoji === "<a:yes:742568893351985303>") {
                 msg.delete();
 
                 toBan.ban(args.slice(1).join(" "))
@@ -73,10 +73,10 @@ module.exports = {
                     });
 
                 logChannel.send(embed);
-            } else if (emoji === "❌") {
+            } else if (emoji === "<a:no:742569138764906628>") {
                 msg.delete();
 
-                message.reply(`ban canceled.`)
+                message.reply(`<a:no:742569138764906628>밴 취소됨.`)
                     .then(m => m.delete(10000));
             }
         });
