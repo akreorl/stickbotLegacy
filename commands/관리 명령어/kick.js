@@ -75,7 +75,7 @@ module.exports = {
             } else if (emoji === "<a:no:742569138764906628>") {
                 msg.delete();
 
-                message.reply(`Kick canceled.`)
+                message.reply(`<a:no:742569138764906628> 킥 취소됨`)
             }
         });
     }
