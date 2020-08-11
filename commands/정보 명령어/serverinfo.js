@@ -9,7 +9,7 @@ const verificationLevels = {
 };
 
 module.exports = {
-    name: "테스트서버정보",
+    name: "서버정보",
     category: "정보 명령어",
     description: "서버 정보를 출력합니다",
     run: async (bot, message, args) => {
