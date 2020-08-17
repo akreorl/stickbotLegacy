@@ -26,34 +26,6 @@ client.on("ready", () => {
       type: 'WATCHING'
     });
 });
-
-client.on("message", async message => {
-    let prefix = config.prefix;
-
-    if (message.content === '-돋보기') {
-        if (!message.member.hasPermission("ADMINISTRATOR")) {
-            return message.reply("서버 관리자만 돋보기 활성화/비활성화가 가능합니다").then(m => m.delete(5000));
-        }
-        if (emotechat === true) {
-            emotechat = false
-            message.reply('돋보기를 비활성화했습니다')
-        } else {
-            emotechat = true
-            message.reply('돋보기를 활성화했습니다')
-        }
-    }
-    if (emotechat !== false) {
-        if (message.content.startsWith('<:')) {
-            message.delete();
-            let data = message.content.split(':')
-            const embed = new API.MessageEmbed()
-            .setImage(`https://cdn.discordapp.com/emojis/${data[2].replace(/>/gi, '')}.png?v=1`)
-            .setColor('#0099ff')
-            .setTimestamp()
-            .setAuthor('막대기봇', 'https://i.imgur.com/iNxjnfg.jpg', 'https://discord.com/api/oauth2/authorize?client_id=676070482189090826&permissions=1074097350&scope=bot');
-            message.channel.send(embed)
-        }
-    }
 	
     if (message.mentions.users.some(x => x.id == client.user.id ) &&  !message.author.bot) {
         const embed = new API.MessageEmbed()
@@ -88,7 +60,6 @@ client.on("message", async message => {
         .setTitle('관리 명령어')
         .setAuthor('막대기봇 초대(클릭)', 'https://i.imgur.com/iNxjnfg.jpg', 'https://discord.com/api/oauth2/authorize?client_id=676070482189090826&permissions=1074097350&scope=bot')
         .setDescription(' ')
-	.addField('돋보기(이모지 확대 기능)', '사용방법: **-돋보기(처음은 꺼진 상태, on/off 형식)** \n 활성화 되있을시 서버 이모지를 임베드로 확대시켜줍니다 \n 봇이 재시작될시 off로 설정됩니다. 되지 않는다면 확인 바랍니다', false)
         .addField('유저 밴(차단) 명령어', '사용방법: **-밴 (밴하고 싶은 유저) (밴 하는 이유)** \n 해당 유저를 서버에서 밴(차단) 합니다', false)
         .addField('유저 킥(강퇴) 명령어', '사용방법: **-킥 (킥하고 싶은 유저) (킥 하는 이유)** \n 해당 유저를 서버애서 킥(강퇴) 합니다', false)
         .addField('메시지 클리어(대량 삭제) 명령어', '사용방법: **-클리어 (지우고 싶은 갯수)** \n 해당 갯수많큼 메시지를 삭제합니다(한번에 최대 100개까지 삭제 가능)', false)
@@ -103,7 +74,6 @@ client.on("message", async message => {
         .setTitle('일반 명령어')
         .setAuthor('막대기봇 초대(클릭)', 'https://i.imgur.com/iNxjnfg.jpg', 'https://discord.com/api/oauth2/authorize?client_id=676070482189090826&permissions=1074097350&scope=bot')
         .setDescription(' ')
-	.addField('네이버 검색 명령어', '사용방법: **-네이버 검색 (검색하고 싶은 것)** \n 네이버에서 검색한 내용을 출력합니다 ~~꺼무위키 검색 아님 주의~~', false)
 	.addField('유저, 봇 정보 명령어', '사용방법: **-정보, -정보 (멘션)** \n 멘션을 하지 않았을시 자신의 정보, 멘션한 유저의 정보를 출력합니다', false)
 	.addField('막대기봇 정보 명령어', '사용방법: **-봇정보** \n 막대기봇의 정보를 출력합니다', false)
 	.addField('서버 정보 명령어', '사용방법: **-서버정보** \n 서버 정보를 출력합니다', false)
