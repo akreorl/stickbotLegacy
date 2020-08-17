@@ -103,6 +103,7 @@ client.on("message", async message => {
         .setTitle('일반 명령어')
         .setAuthor('막대기봇 초대(클릭)', 'https://i.imgur.com/iNxjnfg.jpg', 'https://discord.com/api/oauth2/authorize?client_id=676070482189090826&permissions=1074097350&scope=bot')
         .setDescription(' ')
+	.addField('네이버 검색 명령어', '사용방법: **-네이버 검색 (검색하고 싶은 것)** \n 네이버에서 검색한 내용을 출력합니다 ~~꺼무위키 검색 아님 주의~~', false)
 	.addField('유저, 봇 정보 명령어', '사용방법: **-정보, -정보 (멘션)** \n 멘션을 하지 않았을시 자신의 정보, 멘션한 유저의 정보를 출력합니다', false)
 	.addField('막대기봇 정보 명령어', '사용방법: **-봇정보** \n 막대기봇의 정보를 출력합니다', false)
 	.addField('서버 정보 명령어', '사용방법: **-서버정보** \n 서버 정보를 출력합니다', false)
