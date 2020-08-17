@@ -26,6 +26,9 @@ client.on("ready", () => {
       type: 'WATCHING'
     });
 });
+
+client.on("message", async message => {
+    let prefix = config.prefix;
 	
     if (message.mentions.users.some(x => x.id == client.user.id ) &&  !message.author.bot) {
         const embed = new API.MessageEmbed()
