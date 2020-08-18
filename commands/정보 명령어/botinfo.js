@@ -15,7 +15,7 @@ module.exports = {
         .setColor("#0099ff")
         .setThumbnail(bicon)
         .addField("봇 이름", `<:stickbot:742014638337687622> ${bot.user.username}`, inline)
-        .addField("봇 주인", "<:stick:742013956801167431> <@457403818913693696>", inline )
+        .addField("봇 주인", "<:stick:745114431255740537> <@457403818913693696>", inline )
         .addField("서버 개수", `🛡 ${servsize}`, inline)
         .addField("채널 수", `📁 ${chansize}`, inline)
         .addField("유저 수", `<:discord:742021671497629737> ${usersize}`, inline)
