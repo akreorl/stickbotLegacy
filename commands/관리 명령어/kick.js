@@ -1,4 +1,4 @@
-const  MessageEmbed  = require("discord.js");
+const { MessageEmbed } = require("discord.js");
 const { stripIndents } = require("common-tags");
 const { promptMessage } = require("../../functions.js");
 
@@ -12,39 +12,39 @@ module.exports = {
 
         if (!args[0]) {
             return message.reply("<a:no:742569138764906628>킥할 사람을 멘션해 주세요")
-                .then(m => m.delete(5000));
+                
         }
 
         if (!args[1]) {
             return message.reply("<a:no:742569138764906628>킥 하는 이유를 적어주세요")
-                .then(m => m.delete(5000));
+                
         }
 
         if (!message.member.hasPermission("KICK_MEMBERS")) {
             return message.reply("<a:no:742569138764906628> 당신은 유저 강퇴 권한이 없습니다")
-                .then(m => m.delete(5000));
+                
         }
 
         if (!message.guild.me.hasPermission("KICK_MEMBERS")) {
             return message.reply("<a:no:742569138764906628> 막대기봇이 강퇴 권한을 가지고 있지 않습니다")
-                .then(m => m.delete(5000));
+                
         }
 
         const toKick = message.mentions.members.first() || message.guild.members.get(args[0]);
 
         if (!toKick) {
             return message.reply("<a:no:742569138764906628>해당 멤버를 찾을수 없습니다, 다시 시도해 주세요")
-                .then(m => m.delete(5000));
+                
         }
 
         if (toKick.id === message.author.id) {
             return message.reply("<a:no:742569138764906628>자기 자신을 킥 할수 없습니다")
-                .then(m => m.delete(5000));
+                
         }
 
         if (!toKick.kickable) {
             return message.reply("<a:no:742569138764906628>역할 순위가 높아 강퇴할수 없습니다")
-                .then(m => m.delete(5000));
+                
         }
                 
         const embed = new MessageEmbed()
