@@ -1,6 +1,5 @@
 module.exports = {
     name: "클리어",
-    aliases: ["purge", "nuke"],
     category: "관리 명령어",
     description: "채팅을 클리어(대량 삭제) 합니다",
     run: async (client, message, args) => {
