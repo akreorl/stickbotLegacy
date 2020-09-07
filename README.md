@@ -9,8 +9,6 @@ stickvbot Version2
 
 들오셈:https://disocrd.gg/u2w4Vys
 
-이 레포는 막대기봇을 헤로쿠에 호스팅하는 레포입니다, 프록시파일은 신경 안써도 되는부분
-
 https://github.com/The-SourceCode/Discord.js-Bot-Development 를 많이 참고하엿습니다
 
 © 2020 Stickbot.
