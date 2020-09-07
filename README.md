@@ -7,6 +7,8 @@ stickvbot Version2
 
 코드는 매우 더럽기 때문에 제것은 쓰시지 않는것을 추천드립니다 ㅋㅋㅋㅋㅋㅋ
 
+그래도 만약 사용하시면 출처를 남겨주시기 바랍니다
+
 들오셈:https://disocrd.gg/u2w4Vys
 
 https://github.com/The-SourceCode/Discord.js-Bot-Development 를 많이 참고하엿습니다
