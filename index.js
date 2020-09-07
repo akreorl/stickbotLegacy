@@ -108,4 +108,4 @@ client.on("message", async message => {
     }
 });
 
-client.login(process.env.TOKEN); // 헤로쿠 안쓰실거면 client.login(process.env.TOKEN);의 process.env.TOKEN을 config.token 으로 바꾸어 
+client.login(process.env.TOKEN);
