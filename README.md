@@ -9,7 +9,7 @@ stickvbot Version2
 
 그래도 만약 사용하시면 출처를 남겨주시기 바랍니다
 
-들오셈:https://disocrd.gg/u2w4Vys
+들오셈: https://discord.gg/kV8Wezw
 
 https://github.com/The-SourceCode/Discord.js-Bot-Development 를 많이 참고하엿습니다
 
